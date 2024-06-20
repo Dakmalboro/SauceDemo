@@ -42,7 +42,18 @@ public class Saucedemo {
         browser.findElement(By.cssSelector("[type=submit]")).click();
         boolean isPresent = browser.findElement(By.cssSelector("[class=title]")).isDisplayed();
         assertTrue(isPresent, "The register is not displayed");
+        browser.quit();}
+          public void Test3() {
+        System.setProperty("webdriver.chrome.driver", "src/test/resources/chromedriver.exe");
+        WebDriver browser = new ChromeDriver();
+        browser.get("https://www.saucedemo.com/");
+        browser.findElement(By.id("password"));
+        browser.findElement(By.name("password"));
+        browser.findElement(By.className("login_container"));
+
+
         browser.quit();
 
     }
+    
 }
